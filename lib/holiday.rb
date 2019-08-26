@@ -40,12 +40,7 @@ end
 
 def all_supplies_in_holidays(holiday_hash)
 
- a = holiday_hash.keys.collect {|item| item.to_s.capitalize}
-  d = holiday_hash.collect {|seasons,holidays| holidays.keys.collect {|item| item.to_s}}.flatten.collect {|item| item.gsub("_","_ ")}
-  b = d.collect {|item| item.split(' ')}.flatten.collect {|item| item.capitalize}.join(' ').gsub('_ ','_').split(' ').collect {|item| item.gsub('_',' ')}
-  c = holiday_hash.values.collect {|item| item.values}
-
-  final = [a[0]+':', '  ' + b[0]+ ': ' + c[0][0].join(', '), '  ' + b[1] + ': ' + c[0][1][0], a[1] + ':', '  ' + b[2] + ': ' + c[1][0].join(', '), a[2] + ':', '  ' + b[3] + ': ' + c[2][0][0], a[3] + ':', '  ' + b[4] + ': ' + c[3][0][0]]
+ 
   final.each {|item| puts item}
 end
 
